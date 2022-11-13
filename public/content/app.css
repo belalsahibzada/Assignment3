@@ -1,0 +1,51 @@
+/* Custom CSS goes here */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500&display=swap');
+
+body {
+  background-color: white!important;
+  margin: 0px;
+  font-family: 'Playfair Display', serif;
+}
+
+/*title styling*/
+h1 {
+  font-family: 'Playfair Display', serif;
+  position: absolute;
+  top: 45%;
+  right: 0;
+  left:0;
+  bottom: 0;
+  text-align: center;
+  animation: fade-in 2s 1;
+}
+/*animation keyframe with "fade in" name
+@keyframes fade-in {
+  100% {margin-bottom:150px; opacity:1.0}
+  0% {margin-bottom:75px; opacity:0.0}
+}
+*/
+
+.book-title {
+  font-family: 'Playfair Display', serif; 
+  position: relative;
+  top: 12%;
+  left: 0%;
+  animation: fade-in 2s 1;
+}
+
+@keyframes fade {
+  100% {margin-top:0%; opacity:1.0}
+  0% {margin-top:100%; opacity:0.0}
+}
+
+/* Styles for projects page*/
+p2 {
+  font-family: 'Nunito', sans-serif;
+  position: relative;
+  left: 3%;
+}
+/*animation for when page loads*/
+img { 
+  animation: fade 1s 1 !important;
+}
