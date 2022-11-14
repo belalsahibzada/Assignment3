@@ -1,6 +1,6 @@
 <%- include ../partials/header %>
 <%- include ../partials/main_nav %>
-<!--Content for the edit page-->
+<!--Content for the add page-->
 
 <div class="contrainer">
     <div class="row"> 
@@ -8,47 +8,45 @@
             <h1 class="book-title"> <%= title %></h1> <br><br>
             <form class="form" method="POST">
                 <div class="form-group">
-                    <label for="nameTextField">Book Title </label>
+                    <label for="nameTextField"> Recipe Name </label>
                     <input type="text" class=form-control 
                     id="nameTextField"
-                    placeholde="Enter the Book Title"
-                    name="name" 
-                    value = "<%= book.name %>"
-                    required>
+                    placeholde="Enter the Recipe Name"
+                    name="name" required>
                 </div>
 
                  <div class="form-group">
-                    <label for="authorTextField">Author </label>
+                    <label for="difficultyTextField"> Difficulty </label>
                     <input type="text" class=form-control 
-                    id="authorTextField"
-                    placeholde="Enter the Author"
-                    name="author" 
-                    value = "<%= book.author %>"
-                    required>
+                    id="difficultyTextField"
+                    placeholde="Enter the Difficulty"
+                    name="difficulty" required>
                 </div>
 
 
-                    <!--when you add the description field for the "recipe" then make sure you put the <textarea> tag after required> 
-                    also make sure you do <% book.description %> after required> (can be found 3:33 video 4 edit view)
-                    -->
+                    <!--when you add the description field for the "recipe" then make sure you put the <textarea> tag after required> -->
                  <div class="form-group">
-                    <label for="yearTextField">Year of Publication </label>
+                    <label for="ingredientsTextField"> Ingredients </label>
                     <input type="text" class=form-control 
-                    id="yearTextField"
-                    placeholde="Enter the Year of Publication"
-                    name="year" 
-                    value = "<%= book.year %>"
-                    required>
+                    id="ingredientsTextField"
+                    placeholde="Enter the Ingredients"
+                    name="ingredients" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeTextField"> Time </label>
+                    <input type="number" class=form-control 
+                    id="timeTextField"
+                    placeholde="Enter the Time to make "
+                    name="time" required>
                 </div>
 
                  <div class="form-group">
-                    <label for="priceTextField">Price </label>
+                    <label for="priceTextField"> Price </label>
                     <input type="number" class=form-control 
                     id="priceTextField"
                     placeholde="Enter the Price "
-                    name="price" 
-                    value = "<%= book.price %>"
-                    required>
+                    name="price" required>
                 </div>
                 <br>
                 <button class="btn-btn-primary" type="submit"> 

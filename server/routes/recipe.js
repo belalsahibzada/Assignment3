@@ -3,29 +3,29 @@ let router = express.Router();
 let mongoose = require('mongoose');
 
 // need to connect with book model
-let Book = require('../models/book')
-let bookController = require('../controller/book')
+let Recipe = require('../models/recipe')
+let recipeController = require('../controller/recipe')
 
 /*CRUD Operation */
 // Read operation 
 // Get route for the book list 
-router.get('/',bookController.displayBookList)
+router.get('/',recipeController.displayRecipeList)
 
 /*Perform add operation  */
 /*Get route for displaying the ADD-Page -- Create Operation */
-router.get('/add',bookController.displayAddPage)
+router.get('/add',recipeController.displayAddPage)
 
 /*Post route for processing the ADD-Page -- Create Operation */
-router.post('/add',bookController.processAddPage)
+router.post('/add',recipeController.processAddPage)
 
 /*Perform edit operation  */
 /*Get route for displaying the Edit Operation -- Update Operation */
-router.get('/edit/:id',bookController.displayEditPage)
+router.get('/edit/:id',recipeController.displayEditPage)
 /*Post route for displaying the Edit Operation -- Update Operation */
-router.post('/edit/:id',bookController.processEditPage)
+router.post('/edit/:id',recipeController.processEditPage)
 
 /*Perform delete operation  */
 /*Get to perform Delete Operation -- Deletion */
-router.get('/delete/:id',bookController.performDeletePage)
+router.get('/delete/:id',recipeController.performDeletePage)
 
 module.exports = router;
