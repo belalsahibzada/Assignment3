@@ -13,25 +13,25 @@
             
       <table class="table table-bordered table-striped table-hover">
       <tr> 
-        <th class="text-center col-2"> Name </th>
-        <th class="text-center col-2"> Difficulty </th>
-        <th class="text-center col-2"> Ingredients </th>
-        <th class="text-center col-1"> Time (mins) </th>
-        <th class="text-center col-2"> Price </th>
-        <th class="text-center col-1"> Edit </th>
-        <th class="text-center col-1"> Delete </th>
+        <th class="text-center col-2" style="color:white"> Name </th>
+        <th class="text-center col-2" style="color:white"> Difficulty </th>
+        <th class="text-center col-2" style="color:white"> Ingredients </th>
+        <th class="text-center col-1" style="color:white"> Time (mins) </th>
+        <th class="text-center col-2" style="color:white"> Price </th>
+        <th class="text-center col-1" style="color:white"> Edit </th>
+        <th class="text-center col-1" style="color:white"> Delete </th>
       </tr>
       <% for(let count=0; count<Recipelist.length; count++) { %> 
         <tr> 
-            <td class="text-center col-2"> <%= Recipelist[count].name %> </td>
-            <td class="text-center col-2"> <%= Recipelist[count].difficulty %></td>
-            <td class="text-center col-2"> <%= Recipelist[count].ingredients %></td>
-            <td class="text-center col-2"> <%= Recipelist[count].time %></td>
-            <td class="text-center col-2"> <%= Recipelist[count].price %></td>
-            <td class="text-center col-1">
+            <td class="text-center col-2" style="color:white"> <%= Recipelist[count].name %> </td>
+            <td class="text-center col-2" style="color:white"> <%= Recipelist[count].difficulty %></td>
+            <td class="text-center col-2" style="color:white"> <%= Recipelist[count].ingredients %></td>
+            <td class="text-center col-2" style="color:white"> <%= Recipelist[count].time %></td>
+            <td class="text-center col-2" style="color:white"> <%= Recipelist[count].price %></td>
+            <td class="text-center col-1" style="color:white">
              <a href="/recipes/edit/<%= Recipelist[count]._id %>"
-             class="btn btn-primary">
-             <i class="fas fa-pencil-alt"></i> Edit </a> </td>
+             class="btn btn-primary" style="background-color:#d4b52f" >
+             <i class="fas fa-pencil-alt" ></i> Edit </a> </td>
             <td class="text-center col-1">
              <a href="/recipes/delete/<%= Recipelist[count]._id %>"
              class="btn btn-danger">

@@ -2,7 +2,7 @@
 <%- include ../partials/main_nav %>
 <!--Content for the edit page-->
 
-<div class="contrainer">
+<div class="container-center">
     <div class="row"> 
         <div class="col-md-offset-3 col-md-6">
             <h1 class="recipe-title"> <%= title %></h1> <br><br>
@@ -11,7 +11,7 @@
                     <label for="nameTextField"> Name </label>
                     <input type="text" class=form-control 
                     id="nameTextField"
-                    placeholde="Enter the Recipe NAme"
+                    placeholder="Enter the Recipe NAme"
                     name="name" 
                     value = "<%= recipe.name %>"
                     required>
@@ -21,7 +21,7 @@
                     <label for="difficultyTextField"> Difficulty </label>
                     <input type="text" class=form-control 
                     id="difficultyTextField"
-                    placeholde="Enter the Difficulty"
+                    placeholder="Enter the Difficulty"
                     name="difficulty" 
                     value = "<%= recipe.difficulty %>"
                     required>
@@ -34,7 +34,7 @@
                     <label for="ingredientsTextField"> Ingredients </label>
                     <input type="text" class=form-control 
                     id="ingredientsTextField"
-                    placeholde="Enter the Ingredients"
+                    placeholder="Enter the Ingredients"
                     name="ingredients" 
                     value = "<%= recipe.ingredients %>"
                     required>
@@ -44,7 +44,7 @@
                     <label for="timeTextField"> Time  </label>
                     <input type="number" class=form-control 
                     id="timeTextField"
-                    placeholde="Enter the Time to cook "
+                    placeholder="Enter the Time to cook "
                     name="time" 
                     value = "<%= recipe.time %>"
                     required>
@@ -54,13 +54,13 @@
                     <label for="priceTextField"> Price </label>
                     <input type="number" class=form-control 
                     id="priceTextField"
-                    placeholde="Enter the Price "
+                    placeholder="Enter the Price "
                     name="price" 
                     value = "<%= recipe.price %>"
                     required>
                 </div>
                 <br>
-                <button class="btn-btn-primary" type="submit"> 
+                <button class="btn btn-primary" type="submit" style="background-color:green"> 
                     <i class="fas fa-edit"> </i> Submit 
                 </button>
 

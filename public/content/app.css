@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Playfair+Display:wght@500&display=swap');
 
 body {
-  background-color: white!important;
+  background-color: #3f5470 !important;
   margin: 0px;
   font-family: 'Playfair Display', serif;
 }
@@ -18,6 +18,7 @@ h1 {
   bottom: 0;
   text-align: center;
   animation: fade-in 2s 1;
+  color: white;
 }
 /*animation keyframe with "fade in" name
 @keyframes fade-in {
@@ -32,6 +33,7 @@ h1 {
   top: 12%;
   left: 0%;
   animation: fade-in 2s 1;
+  color: white;
 }
 
 @keyframes fade {
@@ -48,4 +50,14 @@ p2 {
 /*animation for when page loads*/
 img { 
   animation: fade 1s 1 !important;
+}
+
+.container-center { 
+  position:relative;
+  left: 25%;
+}
+
+.form-group{
+  font-family: 'Nunito', sans-serif;
+  color:white;
 }
