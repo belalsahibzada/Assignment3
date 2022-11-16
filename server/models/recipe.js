@@ -1,5 +1,5 @@
 let mongoose = require('mongoose');
-//create a book model
+//create a recipes model
 let recipeModel = mongoose.Schema({
     name : String,
     difficulty : String,
@@ -11,4 +11,6 @@ let recipeModel = mongoose.Schema({
         collections : "recipes"
     }
 )
+
+//make recipeModel public
 module.exports = mongoose.model('Recipe',recipeModel);

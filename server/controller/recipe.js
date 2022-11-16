@@ -4,6 +4,9 @@ let mongoose = require('mongoose');
 
 let Recipe = require('../models/recipe')
 
+//controller for recipe page -> used to organize code
+
+//controller for displaying the recipes list
 module.exports.displayRecipeList = (req,res,next) => {
     Recipe.find((err,recipelist) => {
         if(err)
@@ -20,11 +23,13 @@ module.exports.displayRecipeList = (req,res,next) => {
     });
 };
 
+//controller for displaying the add page
 module.exports.displayAddPage = (req,res,next) =>  {
     res.render('recipe/add',{title:'Add Recipe'})
 
 };
 
+//controller for adding contents on add page
 module.exports.processAddPage = (req,res,next) =>  {
     let newRecipe = Recipe ({
         "name" : req.body.name,
@@ -46,6 +51,7 @@ module.exports.processAddPage = (req,res,next) =>  {
     })
 };
 
+//controller for displaying edit page
 module.exports.displayEditPage = (req,res,next) =>  {
     let id = req.params.id;
     Recipe.findById(id,(err,recipeToEdit)=> {
@@ -60,6 +66,7 @@ module.exports.displayEditPage = (req,res,next) =>  {
     })
 };
 
+//controller for processing the edit page
 module.exports.processEditPage = (req,res,next) =>  {
     let id = req.params.id;
     let updateRecipe = Recipe({
@@ -82,6 +89,7 @@ module.exports.processEditPage = (req,res,next) =>  {
     })
 };
 
+//controller for deleting items
 module.exports.performDeletePage = (req,res,next) =>  {
     let id = req.params.id;
     Recipe.deleteOne({_id:id},(err) => {
